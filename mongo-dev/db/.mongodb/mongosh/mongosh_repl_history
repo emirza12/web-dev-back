@@ -1,0 +1,5 @@
+exit
+db.getUsers()
+use api
+exit
+use esilv

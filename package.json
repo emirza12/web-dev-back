@@ -1,0 +1,22 @@
+{
+  "name": "webdev_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^8.10.0",
+    "nodemon": "^3.1.9"
+  }
+}
