@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js ",
     "dev": "nodemon --watch src src/index.js"
   },
   "keywords": [],
