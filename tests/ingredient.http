@@ -1,0 +1,142 @@
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Cucumber",
+  "category": "Vegetable",
+  "price": 1.49,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Apple",
+  "category": "Fruit",
+  "price": 2.10,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Banana",
+  "category": "Fruit",
+  "price": 1.20,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Chicken Breast",
+  "category": "Meat",
+  "price": 5.99,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Beef Steak",
+  "category": "Meat",
+  "price": 7.99,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Salmon",
+  "category": "Fish",
+  "price": 10.00,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Milk",
+  "category": "Dairy",
+  "price": 1.10,
+  "unit": "liter"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Cheese",
+  "category": "Dairy",
+  "price": 5.00,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Butter",
+  "category": "Dairy",
+  "price": 3.00,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Eggs",
+  "category": "Dairy",
+  "price": 2.50,
+  "unit": "dozen"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Flour",
+  "category": "Grain",
+  "price": 1.80,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Rice",
+  "category": "Grain",
+  "price": 2.00,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Pasta",
+  "category": "Grain",
+  "price": 1.50,
+  "unit": "kg"
+}
+
+POST http://localhost:3000/api/ingredients HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Tomato",
+  "category": "Vegetable",
+  "price": 1.99,
+  "unit": "kg"
+}
+
+

@@ -1,8 +1,8 @@
-// Import the framework and instantiate it
 import Fastify from 'fastify'
 import dotenv from 'dotenv'
 import { connect } from './db/connect.js'
-import addRouteHandlers from "./handlers/index.js"
+import addUserRouteHandlers from "./handlers/user-handler.js"
+import addIngredientRouteHandlers from "./handlers/ingredient-handler.js"
 import cors from '@fastify/cors'
 
 dotenv.config()
@@ -14,7 +14,9 @@ const fastify = Fastify({
 
 await fastify.register(cors,{});
 
-addRouteHandlers(fastify);
+addUserRouteHandlers(fastify);
+addIngredientRouteHandlers(fastify);
+
 
 try {
   await connect()

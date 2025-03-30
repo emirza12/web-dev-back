@@ -1,8 +1,8 @@
 import {compareHash, getHashFromClearText} from '../utils/crypto.js'
-import User from '../user/user-model.js'
+import User from '../models/user-model.js'
 import jwt from 'jsonwebtoken';
 
-export default function addRouteHandlers(fastify){
+export default function addUserRouteHandlers(fastify){
     
     fastify.get('/', async function handler (request, reply) {
          return { hello: 'world' }
