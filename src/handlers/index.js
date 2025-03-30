@@ -3,7 +3,7 @@ import User from '../user/user-model.js'
 
 export default function addRouteHandlers(fastify){
     
-    fastify.get('/api/hello', async function handler (request, reply) {
+    fastify.get('/', async function handler (request, reply) {
          return { hello: 'world' }
     })
 
