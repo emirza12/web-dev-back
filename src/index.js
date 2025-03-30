@@ -2,12 +2,9 @@
 import Fastify from 'fastify'
 import dotenv from 'dotenv'
 import { connect } from './db/connect.js'
-
-
 import addRouteHandlers from "./handlers/index.js"
 
 dotenv.config()
-
 const port = process.env.PORT
 
 const fastify = Fastify({
@@ -15,7 +12,6 @@ const fastify = Fastify({
 })
 
 addRouteHandlers(fastify)
-
 
 // Run the server!
 try {
