@@ -16,7 +16,6 @@ await fastify.register(cors,{});
 
 addRouteHandlers(fastify);
 
-// Run the server!
 try {
   await connect()
   await fastify.listen({ port, host: '0.0.0.0' })
