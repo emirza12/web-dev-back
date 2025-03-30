@@ -18,27 +18,50 @@ export default function addRouteHandlers(fastify){
     })
 
     fastify.post('/api/token', async function handler (request, reply) {
-        const user = await User.findOne({ username: request.body.username})
-        const password = request.body.password
-        
-        if(!user.comparePassword(password)){
-          reply.send(401)
-          return{
-            error: 401,
-            message: 'Invalid credentials'
-          }
-        }
-      
-        const token = createJWT(user);
-        reply.send({ token });
-      })
-      
-      function createJWT(user){
-        return jwt.sign(
-          { id: user._id, username: user.username },
-          process.env.SECRET_KEY, 
-          { expiresIn: '1h' } 
-      );
+      const user = await User.findOne({ username: request.body.username });
+  
+      if (!user) {
+          return reply.status(401).send({
+              error: 401,
+              message: 'Invalid username'
+          });
       }
+  
+      const password = request.body.password;
+      if (!user.comparePassword(password)) {
+          return reply.status(401).send({
+              error: 401,
+              message: 'Invalid password'
+          });
+      }
+  
+      const token = createJWT(user);
+      reply.send({ token });
+  });
+  
+  function createJWT(user) {
+      const token = jwt.sign(
+          { id: user._id, username: user.username },
+          process.env.SECRET_KEY,
+          { expiresIn: '1h' }
+      );
+      return token;
+  }
+  
+
+    fastify.post('/api/verify-token', async function (request, reply) {
+      const token = request.headers.authorization?.split(' ')[1];
+  
+      if (!token) {
+          return reply.status(401).send({ error: 'No token provided' });
+      }
+  
+      try {
+          const decoded = jwt.verify(token, process.env.SECRET_KEY);
+          reply.status(200).send({ message: 'Token is valid' });
+      } catch (err) {
+          reply.status(401).send({ error: 'Invalid token' });
+      }
+  });
 
 }
